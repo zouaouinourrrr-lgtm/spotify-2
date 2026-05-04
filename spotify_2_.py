@@ -10,7 +10,7 @@ Original file is located at
 import streamlit as st
 import requests
 
-st.set_page_config(page_title="Streamlitify Pro", layout="wide", page_icon="🎵")
+st.set_page_config(page_title="Melodies", layout="wide", page_icon="🎵")
 
 st.markdown("""
 <style>
@@ -71,12 +71,12 @@ def text_tile(item, key):
 
 # --- DATA ---
 MOODS = [
-    {"label": "🔥 Need Motivation?", "tags": "energetic+upbeat"},
-    {"label": "❤️ In Love?", "tags": "romantic+love"},
-    {"label": "🎉 Have Some Fun", "tags": "happy+fun"},
-    {"label": "💔 Don't Be Sad Diva", "tags": "sad+emotional"},
-    {"label": "✨ Main Character Aura", "tags": "epic+powerful"},
-    {"label": "🌙 Late Night Thoughts", "tags": "chill+melancholic"},
+    {"label": "Need Motivation?", "tags": "energetic+upbeat"},
+    {"label": "In Love?", "tags": "romantic+love"},
+    {"label": " Have Some Fun", "tags": "happy+fun"},
+    {"label": "Don't Be Sad Diva", "tags": "sad+emotional"},
+    {"label": " Main Character Aura", "tags": "epic+powerful"},
+    {"label": " Late Night Thoughts", "tags": "chill+melancholic"},
 ]
 
 ERAS = [
@@ -89,20 +89,20 @@ ERAS = [
 
 # --- SIDEBAR ---
 with st.sidebar:
-    st.title("🎵 Streamlitify")
-    if st.button("🏠 Home"):
+    st.title("🎵 Melodies")
+    if st.button(" Home"):
         st.session_state.view = "home"
         st.rerun()
-    if st.button("🔍 Search"):
+    if st.button(" Search"):
         st.session_state.view = "search"
         st.rerun()
-    if st.button("🎭 Moods"):
+    if st.button(" Moods"):
         st.session_state.view = "moods"
         st.rerun()
-    if st.button("⏱️ Time Machine"):
+    if st.button(" Time Machine"):
         st.session_state.view = "eras"
         st.rerun()
-    if st.button("📚 Library"):
+    if st.button(" Library"):
         st.session_state.view = "library"
         st.rerun()
 
@@ -116,14 +116,14 @@ if st.session_state.view == "library":
     else:
         for i, track in enumerate(st.session_state.liked_songs):
             col1, col2 = st.columns([5, 1])
-            col1.write(f"❤️ {track['title']}")
+            col1.write(f" {track['title']}")
             if col2.button("Play", key=f"lib_{i}"):
                 st.session_state.playing_track = track
                 st.rerun()
 
 # MOODS
 elif st.session_state.view == "moods":
-    st.title("🎭 Mood Picker")
+    st.title(" Mood Picker")
     cols = st.columns(2)
     for i, mood in enumerate(MOODS):
         with cols[i % 2]:
@@ -134,7 +134,7 @@ elif st.session_state.view == "moods":
 
 # ERAS
 elif st.session_state.view == "eras":
-    st.title("⏱️ Time Machine")
+    st.title("Time Machine")
     cols = st.columns(5)
     for i, era in enumerate(ERAS):
         with cols[i]:
@@ -177,7 +177,7 @@ elif st.session_state.view == "artist_profile":
                 "url": f"{BASE_URL}/tracks/{t['id']}/stream?app_name=ST"
             }
             st.rerun()
-        if c3.button("❤️", key=f"like_{t['id']}"):
+        if c3.button(key=f"like_{t['id']}"):
             st.session_state.liked_songs.append({
                 "title": t['title'],
                 "url": f"{BASE_URL}/tracks/{t['id']}/stream?app_name=ST"

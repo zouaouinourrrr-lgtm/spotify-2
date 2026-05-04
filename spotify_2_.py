@@ -171,13 +171,13 @@ elif st.session_state.view == "artist_profile":
     for t in tracks[:10]:
         c1, c2, c3 = st.columns([4, 1, 1])
         c1.write(t['title'])
-        if c2.button("Play", key=t['id']):
+        if c2.button("▶ play", key=f"res_play_{t['id']}"):
             st.session_state.playing_track = {
                 "title": t['title'],
                 "url": f"{BASE_URL}/tracks/{t['id']}/stream?app_name=ST"
             }
             st.rerun()
-        if c3.button(key=f"like_{t['id']}"):
+        if c3.button("❤️ save", key=f"like_{t['id']}"):
             st.session_state.liked_songs.append({
                 "title": t['title'],
                 "url": f"{BASE_URL}/tracks/{t['id']}/stream?app_name=ST"

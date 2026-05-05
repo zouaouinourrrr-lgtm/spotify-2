@@ -124,6 +124,18 @@ if st.session_state.view == "library":
 # MOODS
 elif st.session_state.view == "moods":
     st.title(" Mood Picker")
+    
+    st.markdown("""
+    <style>
+    [data-testid="stImage"] img {
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 15px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
     cols = st.columns(2)
     for i, mood in enumerate(MOODS):
         with cols[i % 2]:

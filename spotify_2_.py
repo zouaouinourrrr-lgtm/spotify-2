@@ -71,12 +71,12 @@ def text_tile(item, key):
 
 # --- DATA ---
 MOODS = [
-    {"label": "Need Motivation?", "tags": "energetic+upbeat"},
-    {"label": "In Love?", "tags": "romantic+love"},
-    {"label": " Have Some Fun", "tags": "happy+fun"},
-    {"label": "Don't Be Sad Diva", "tags": "sad+emotional"},
-    {"label": " Main Character Aura", "tags": "epic+powerful"},
-    {"label": " Late Night Thoughts", "tags": "chill+melancholic"},
+    {"label": " Need Motivation?",   "tags": "energetic+upbeat",  "img": "motivation.jpeg"},
+    {"label": "In Love?",            "tags": "romantic+love",     "img": "love.jpeg"},
+    {"label": " Have Some Fun",       "tags": "happy+fun",         "img": "sad.jpeg"},
+    {"label": " Don't Be Sad Diva",   "tags": "sad+emotional",     "img": "latenight.jpeg"},
+    {"label": " Main Character Aura", "tags": "epic+powerful",     "img": "aura.jpeg"},
+    {"label": "Late Night Thoughts", "tags": "chill+melancholic", "img": "now.jpeg"},
 ]
 
 ERAS = [

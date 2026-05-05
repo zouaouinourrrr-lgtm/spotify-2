@@ -74,9 +74,9 @@ MOODS = [
     {"label": " Need Motivation?",   "tags": "energetic+upbeat",  "img": "motivation.jpeg"},
     {"label": "In Love?",            "tags": "romantic+love",     "img": "love.jpeg"},
     {"label": " Have Some Fun",       "tags": "happy+fun",         "img": "fun.jpeg"},
-    {"label": " Don't Be Sad Diva",   "tags": "sad+emotional",     "img": "latenight.jpeg"},
+    {"label": " Don't Be Sad Diva",   "tags": "sad+emotional",     "img": "sad.jpeg"},
     {"label": " Main Character Aura", "tags": "epic+powerful",     "img": "aura.jpeg"},
-    {"label": "Late Night Thoughts", "tags": "chill+melancholic", "img": "now.jpeg"},
+    {"label": "Late Night Thoughts", "tags": "chill+melancholic", "img": "latenight.jpeg"},
 ]
 
 ERAS = [

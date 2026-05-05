@@ -73,7 +73,7 @@ def text_tile(item, key):
 MOODS = [
     {"label": " Need Motivation?",   "tags": "energetic+upbeat",  "img": "motivation.jpeg"},
     {"label": "In Love?",            "tags": "romantic+love",     "img": "love.jpeg"},
-    {"label": " Have Some Fun",       "tags": "happy+fun",         "img": "sad.jpeg"},
+    {"label": " Have Some Fun",       "tags": "happy+fun",         "img": "fun.jpeg"},
     {"label": " Don't Be Sad Diva",   "tags": "sad+emotional",     "img": "latenight.jpeg"},
     {"label": " Main Character Aura", "tags": "epic+powerful",     "img": "aura.jpeg"},
     {"label": "Late Night Thoughts", "tags": "chill+melancholic", "img": "now.jpeg"},
@@ -82,7 +82,7 @@ MOODS = [
 ERAS = [
     {"label": "✦ 80s ✦", "tags": "synthpop+newwave+disco", "img": "80s.jpeg"},
     {"label": "✦ 90s ✦", "tags": "grunge+rnb+alternative", "img": "90s.jpeg"},
-    {"label": "✦ 00s ✦", "tags": "indie+pop+punk",         "img": None},
+    {"label": "✦ 00s ✦", "tags": "indie+pop+punk",         "img": "00s.jpeg"},
     {"label": "✦ 10s ✦", "tags": "electronic+hiphop+edm",  "img": "10s.jpeg"},
     {"label": "✦ NOW ✦", "tags": "pop+lofi+trap",           "img": "now.jpeg"},
 ]

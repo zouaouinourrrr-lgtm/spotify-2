@@ -80,11 +80,11 @@ MOODS = [
 ]
 
 ERAS = [
-    {"label": "✦ 80s ✦", "tags": "synthpop+newwave+disco"},
-    {"label": "✦ 90s ✦", "tags": "grunge+rnb+alternative"},
-    {"label": "✦ 00s ✦", "tags": "indie+pop+punk"},
-    {"label": "✦ 10s ✦", "tags": "electronic+hiphop+edm"},
-    {"label": "✦ NOW ✦", "tags": "pop+lofi+trap"},
+    {"label": "✦ 80s ✦", "tags": "synthpop+newwave+disco", "img": "80s.jpeg"},
+    {"label": "✦ 90s ✦", "tags": "grunge+rnb+alternative", "img": "90s.jpeg"},
+    {"label": "✦ 00s ✦", "tags": "indie+pop+punk",         "img": None},
+    {"label": "✦ 10s ✦", "tags": "electronic+hiphop+edm",  "img": "10s.jpeg"},
+    {"label": "✦ NOW ✦", "tags": "pop+lofi+trap",           "img": "now.jpeg"},
 ]
 
 # --- SIDEBAR ---
@@ -127,7 +127,8 @@ elif st.session_state.view == "moods":
     cols = st.columns(2)
     for i, mood in enumerate(MOODS):
         with cols[i % 2]:
-            if text_tile(mood, key=f"mood_{i}"):
+            st.image(mood["img"], use_column_width=True)
+            if st.button(mood["label"], key=f"mood_{i}"):
                 st.session_state.selected_artist = mood["tags"]
                 st.session_state.view = "artist_profile"
                 st.rerun()
@@ -138,7 +139,9 @@ elif st.session_state.view == "eras":
     cols = st.columns(5)
     for i, era in enumerate(ERAS):
         with cols[i]:
-            if text_tile(era, key=f"era_{i}"):
+            if era["img"]:
+                st.image(era["img"], use_column_width=True)
+            if st.button(era["label"], key=f"era_{i}"):
                 st.session_state.selected_artist = era["tags"]
                 st.session_state.view = "artist_profile"
                 st.rerun()

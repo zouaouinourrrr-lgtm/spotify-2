@@ -148,6 +148,18 @@ elif st.session_state.view == "moods":
 # ERAS
 elif st.session_state.view == "eras":
     st.title("Time Machine")
+    
+    st.markdown("""
+    <style>
+    [data-testid="stImage"] img {
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 15px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
     cols = st.columns(5)
     for i, era in enumerate(ERAS):
         with cols[i]:
